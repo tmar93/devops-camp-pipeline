@@ -30,7 +30,7 @@ pipeline {
                         docker.withRegistry('https://$HARBOR_REGISTRY', 'tramirez-harbor-auth') {
                             sh 'docker tag $APP_IMAGE_NAME-$COMMIT_HASH $HARBOR_REGISTRY/$HARBOR_PROJECT/$APP_IMAGE_NAME:$COMMIT_HASH-$PIPELINE_HASH'
                             sh 'docker push $HARBOR_REGISTRY/$HARBOR_PROJECT/$APP_IMAGE_NAME:$COMMIT_HASH-$PIPELINE_HASH'
-                            sh 'docker images'
+                            
                         }
                     }
                 }
