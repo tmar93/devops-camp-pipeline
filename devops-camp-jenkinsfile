@@ -26,7 +26,8 @@ pipeline {
                 }
             }
         }
-        stage('Application docker build') {
+        stage('Application docker build') 
+        {
             steps {
                 echo "Building application image"
                 //TODO("Lab 4 - Artifact Management"): build the docker app image
@@ -58,6 +59,7 @@ pipeline {
                     }
                 }
             }
+
         }
         stage('Database docker build') {
             steps {
